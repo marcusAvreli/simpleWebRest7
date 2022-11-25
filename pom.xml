@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>simpleWebRest7</groupId>
+  <artifactId>simpleWebRest7</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>simpleWebRest7</name>
+  <url>http://maven.apache.org</url>
+          <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+      
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- logging -->
+          <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.15.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.15.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-slf4j-impl</artifactId>
+    <version>2.15.0</version>
+</dependency>
+    
+    <!-- jersey -->
+     <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>2.17</version>
+        </dependency>
+   <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>servlet-api</artifactId>
+    <version>2.5</version>
+    <scope>provided</scope>
+</dependency>
+<!-- jersey json -->
+<dependency>
+   <groupId>org.glassfish.jersey.media</groupId>
+   <artifactId>jersey-media-json-jackson</artifactId>
+   <version>2.32</version>
+</dependency>
+
+
+<!--data access -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.19</version>
+</dependency>
+
+  </dependencies>
+  <build>
+    <finalName>simpleWebRest7</finalName>
+    
+     <resources>
+      <resource>       
+        <directory>src/main/resources</directory>      
+        <filtering>true</filtering>
+      </resource>     
+    </resources>
+    
+    <plugins>
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.1</version>
+        <configuration>
+          <!--<webResources>
+                    <resource>
+                        <directory>src/main/webapp/META-INF</directory>
+                        <filtering>true</filtering>
+                        <targetPath>META-INF</targetPath>
+                    </resource>
+                </webResources>-->
+           <outputDirectory>C:\tomcat9\webapps</outputDirectory>
+           <!-- Example of Tomcat webapps location :D:\tomcat\webapps\ -->
+        </configuration>
+      </plugin>
+     
+    </plugins>
+  </build>
+</project>

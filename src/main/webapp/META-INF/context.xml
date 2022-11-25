@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/testdb" 
+              auth="Container"
+              type="javax.sql.DataSource" 
+              username="jsmith" 
+              password="zubur1"              
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://192.168.243.133:3306/identityiq"
+              maxTotal="10" 
+              maxIdle="4"/>
+
+</Context>
